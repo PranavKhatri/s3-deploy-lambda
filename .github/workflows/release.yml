@@ -56,4 +56,5 @@ jobs:
       - name: Update the Function Code
         run : |
           aws lambda update-function-code --function-name "tasl-12-feb" \
-          --source-bundle S3Bucket="${{ env.PACKAGE_S3_BUCKET_NAME }}",S3Key="${{ env.DEPLOY_PACKAGE_NAME }}"
+          --s3-bucket ${{ env.PACKAGE_S3_BUCKET_NAME}} \
+          --s3-key ${{ env.DEPLOY_PACKAGE_NAME }}
