@@ -55,6 +55,6 @@ jobs:
 
       - name: Update the Function Code
         run : |
-          aws lambda update-function-code --function-name "tasl-12-feb" \
+          aws lambda update-function-code --function-name "task-12-feb" \
           --s3-bucket ${{ env.PACKAGE_S3_BUCKET_NAME}} \
           --s3-key ${{ env.DEPLOY_PACKAGE_NAME }}
